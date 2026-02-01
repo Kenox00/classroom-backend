@@ -2,6 +2,12 @@ import { eq } from 'drizzle-orm';
 import { db } from './db';
 import { demoUsers } from './db/schema/schema';
 
+/**
+ * Executes a demo sequence of CRUD operations against the `demoUsers` table.
+ *
+ * Performs create, read, update, and delete actions using the shared `db` and `demoUsers`,
+ * logs each step's result, and exits the process with code 1 if an error occurs.
+ */
 async function main() {
   try {
     console.log('Performing CRUD operations...');
